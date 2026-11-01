@@ -1210,7 +1210,7 @@
         ];
 
         /*__GIFT_CONFIG_START__*/
-        let GIFT_READ_ONLY_MODE = true;
+        let GIFT_READ_ONLY_MODE = false;
         const STARTER_LETTERS = [
     {
         "id": "lettre-unique-1",
@@ -1324,7 +1324,7 @@
             // Permet aussi d'activer la vue copine via ?vue=copine dans l'URL
             const params = new URLSearchParams(window.location.search);
             if (params.get('vue') === 'copine' || params.get('gift') === '1') {
-                GIFT_READ_ONLY_MODE = false;
+                GIFT_READ_ONLY_MODE = true;
             }
 
             loadStateFromStorage();
